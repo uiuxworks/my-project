@@ -6,7 +6,7 @@ export default function Top(){
     </div> 
     <div class="pb-8 w-full">
         <div class="text-2xl pt-6 pb-6 text-center font-sans text-[#6C7581] max-w-[240px] leading-6 mx-auto ">
-            Kami mengundang Anda untuk menghadiri pernikahan kami
+        Kami mengundang Saudara/i untuk hadir dihari pernikahan kami            
         </div>
         <div class="text-center py-4 space-y">
             <h1 class="text-center text-3xl text-[#1B1B1B]">Winda Pratiwi</h1>

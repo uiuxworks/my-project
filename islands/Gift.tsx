@@ -2,8 +2,8 @@ export default function Gift(){
     return (
 <div class="bg-[#E7EDF4] px-8 text-center pt-10">
 <div class="w-full">
-   <h1 class="text-center text-2xl text-[#252627] mb-4">Wedding Gift</h1>
-   <p>Bagi Keluarga dan Sahabat yang ingin mengirimkan Hadiah, Silahkan mengirimkannya melalui :</p>
+   <h1 class="text-center text-2xl text-[#252627] mb-4">Kotak Angpau</h1>
+   <p>Dengan tanpa mengurangi rasa hormat, permohonan maaf kami sampaikan bahwa kami tidak menerima cinderamata.</p>
 </div>
 <div class="space-y-10 py-10">
     <div class="bg-[#CFD9E6] max-w-[280px] mx-auto rounded-xl py-6">
