@@ -45,12 +45,12 @@ export default function Rsvp() {
                   name="extra"
                   type="radio"
                   checked
-                  class="h-4 w-4 border-gray-300 text-[#3A3C41] focus:ring-[#3A3C41]"
+                  class="h-4 w-4 border-gray-300 text-[#252627] focus:ring-[#252627]"
                 >
                 </input>
                 <label
                   for="Just Me"
-                  class="ml-3 block text-md font-medium text-gray-700"
+                  class="ml-3 block text-lg font-medium text-gray-700"
                 >
                   Hanya saya
                 </label>
@@ -61,12 +61,12 @@ export default function Rsvp() {
                   value="+1"
                   name="extra"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-[#3A3C41] focus:ring-[#3A3C41]"
+                  class="h-4 w-4 border-gray-300 text-[#252627] focus:ring-[#252627]"
                 >
                 </input>
                 <label
                   for="+1"
-                  class="ml-3 block text-md font-medium text-gray-700"
+                  class="ml-3 block text-lg font-medium text-gray-700"
                 >
                   Plus 1
                 </label>
@@ -77,7 +77,7 @@ export default function Rsvp() {
 
         <div class="text-center ">
           <button
-            class="w-full bg-[#3A3C41] text-white rounded-full h-10"
+            class="w-full bg-[#3A3C41] text-white rounded-full py-3"
             type="submit"
           >
             Send Reservasi
