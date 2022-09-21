@@ -1,4 +1,4 @@
-import { Handlers, HandlerContext, PageProps } from "$fresh/server.ts";
+import { HandlerContext, Handlers, PageProps } from "$fresh/server.ts";
 import Nav from "../components/Nav.tsx";
 import Hero from "../components/Hero.tsx";
 import Top from "../components/Top.tsx";
@@ -22,13 +22,15 @@ export const handler: Handlers = {
     const url =
       "https://hooks.airtable.com/workflows/v1/genericWebhook/appJd8TRw3TQrx3IS/wflfCeagMwRy1pnoe/wtrrALq1lGIwnbQDH";
 
-    await fetch(url, {
+    const res = await fetch(url, {
       method: "POST",
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" },
     });
 
-    return ctx.render({ submitted: true });
+    console.log(res.ok );
+
+    return ctx.render( { submitted: res.ok } );
   },
 };
 
@@ -42,7 +44,7 @@ export default function Home(props: PageProps) {
       <Nav />
       <Hero />
       <Top />
-      { props.data?.submitted ? <Rsvp.Complete /> : <Rsvp.Incomplete />}
+      {props.data?.submitted ? <Rsvp.Complete /> : <Rsvp.Incomplete />}
       <Gift />
       <Footer />
     </div>
