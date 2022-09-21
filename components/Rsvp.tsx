@@ -1,4 +1,4 @@
-export function Incomplete() {
+export default function Rsvp() {
   return (
     <div class="bg-[#E7EDF4] pt-10">
       <div class="pb-8 w-full">
@@ -91,12 +91,12 @@ export function Incomplete() {
   );
 }
 
-export function Complete() {
-  return (
-    <div class="bg-[#E7EDF4] pt-10">
-      <div class="pb-8 w-full">
-        <h1 class="text-center text-2xl text-[#252627]">See you soon!</h1>
-      </div>
-    </div>
-  );
-}
+// export function Complete() {
+//   return (
+//     <div class="bg-[#E7EDF4] pt-10">
+//       <div class="pb-8 w-full">
+//         <h1 class="text-center text-2xl text-[#252627]">See you soon!</h1>
+//       </div>
+//     </div>
+//   );
+// }
