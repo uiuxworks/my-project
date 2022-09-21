@@ -1,3 +1,5 @@
+import { Head } from "$fresh/runtime.ts";
+
 import { HandlerContext, Handlers, PageProps } from "$fresh/server.ts";
 import Nav from "../components/Nav.tsx";
 import Hero from "../components/Hero.tsx";
@@ -5,6 +7,15 @@ import Top from "../components/Top.tsx";
 import * as Rsvp from "../components/Rsvp.tsx";
 import Gift from "../components/Gift.tsx";
 import Footer from "../components/Footer.tsx";
+
+
+{/* <Head>
+  <style>
+      html {scroll-behavior: smooth;}
+  </style>
+</Head> */}
+
+
 
 export const handler: Handlers = {
   async POST(req: Request, ctx: HandlerContext) {
@@ -40,10 +51,18 @@ export default function Home(props: PageProps) {
       <div class="bg-gray-300 w-[1px] h-full absolute inset-y-0 right-0 mr-4">
       </div>
       <Nav />
+      <div id="hero">
       <Hero />
+      </div>
+      <div id="date">
       <Top />
+      </div>
+      <div id="rsvp">
       <Rsvp.Incomplete />
+      </div>
+      <div id="gift">
       <Gift />
+      </div>
       <Footer />
     </div>
   );
