@@ -27,7 +27,7 @@ export const handler: Handlers = {
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" },
     });
-    //@TODO: Pass success through to index
+
     return ctx.render({ submitted: true });
   },
 };
