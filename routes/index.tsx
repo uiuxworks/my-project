@@ -1,8 +1,8 @@
-import { HandlerContext, Handlers } from "$fresh/server.ts";
+import { Handlers, HandlerContext, PageProps } from "$fresh/server.ts";
 import Nav from "../components/Nav.tsx";
 import Hero from "../components/Hero.tsx";
 import Top from "../components/Top.tsx";
-import Rsvp from "../components/Rsvp.tsx";
+import * as Rsvp from "../components/Rsvp.tsx";
 import Gift from "../components/Gift.tsx";
 import Footer from "../components/Footer.tsx";
 
@@ -28,11 +28,11 @@ export const handler: Handlers = {
       headers: { "Content-Type": "application/json" },
     });
     //@TODO: Pass success through to index
-    return ctx.render();
+    return ctx.render({ submitted: true });
   },
 };
 
-export default function Home() {
+export default function Home(props: PageProps) {
   return (
     <div class="max-w-[400px] mx-auto relative font-custom">
       <div class="bg-gray-300 w-[1px] h-full absolute inset-y-0 left-0 ml-4">
@@ -42,7 +42,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <Top />
-      <Rsvp />
+      { props.data?.submitted ? <Rsvp.Complete /> : <Rsvp.Incomplete />}
       <Gift />
       <Footer />
     </div>

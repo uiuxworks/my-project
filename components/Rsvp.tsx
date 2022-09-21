@@ -1,4 +1,4 @@
-export default function Rsvp() {
+export function Incomplete() {
   return (
     <div class="bg-[#E7EDF4] pt-10">
       <div class="pb-8 w-full">
@@ -86,6 +86,16 @@ export default function Rsvp() {
       </form>
       <div class="flex justify-center">
         <img src="/divider.svg" alt="" />
+      </div>
+    </div>
+  );
+}
+
+export function Complete() {
+  return (
+    <div class="bg-[#E7EDF4] pt-10">
+      <div class="pb-8 w-full">
+        <h1 class="text-center text-2xl text-[#252627]">See you soon!</h1>
       </div>
     </div>
   );
