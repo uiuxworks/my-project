@@ -28,7 +28,14 @@ export const handler: Handlers = {
       headers: { "Content-Type": "application/json" },
     });
 
-    return ctx.render({ submitted: res.ok });
+    const resp = new Response("", {
+      status: 303,
+      headers: { Location: "/" },
+    });
+
+    return resp;
+
+    // return ctx.render({ submitted: res.ok });
   },
 };
 
