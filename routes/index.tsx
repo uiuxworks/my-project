@@ -2,12 +2,13 @@ import { HandlerContext, Handlers, PageProps } from "$fresh/server.ts";
 import Nav from "../components/Nav.tsx";
 import Hero from "../components/Hero.tsx";
 import Top from "../components/Top.tsx";
-import * as Rsvp from "../components/Rsvp.tsx";
+import Rsvp from "../components/Rsvp.tsx";
 import Gift from "../components/Gift.tsx";
 import Footer from "../components/Footer.tsx";
 
 export const handler: Handlers = {
-  async POST(req: Request, ctx: HandlerContext) {
+
+  async POST(req: Request) {
     const formData = await req.formData();
 
     // Convert FormData to JSON.
@@ -25,17 +26,13 @@ export const handler: Handlers = {
     const res = await fetch(url, {
       method: "POST",
       body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "Location": "/" },
     });
 
-    const resp = new Response("", {
+    return new Response("", {
       status: 303,
       headers: { Location: "/" },
     });
-
-    return resp;
-
-    // return ctx.render({ submitted: res.ok });
   },
 };
 
@@ -49,7 +46,7 @@ export default function Home(props: PageProps) {
       <Nav />
       <Hero />
       <Top />
-      <Rsvp.Incomplete />
+      <Rsvp />
       <Gift />
       <Footer />
     </div>
