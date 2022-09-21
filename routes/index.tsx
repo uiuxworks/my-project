@@ -30,8 +30,6 @@ export const handler: Handlers = {
       headers: { "Content-Type": "application/json" },
     });
 
-    console.log(res.ok);
-
     return ctx.render({ submitted: res.ok });
   },
 };
