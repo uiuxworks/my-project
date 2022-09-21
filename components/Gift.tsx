@@ -3,7 +3,7 @@ export default function Gift() {
     <div class="bg-[#E7EDF4] px-8 text-center pt-10">
       <div class="w-full">
         <h1 class="text-center text-2xl text-[#252627] mb-4">Kotak Angpau</h1>
-        <p>
+        <p class="text-lg max-w-[310px] mx-auto">
           Dengan tanpa mengurangi rasa hormat, permohonan maaf kami sampaikan
           bahwa kami tidak menerima cinderamata.
         </p>
@@ -55,8 +55,9 @@ export default function Gift() {
             </svg>
           </div>
           <div>
-            <div class="text-[#6C7581] text-lg mb-2 ">Winda Pratiwi</div>
-            <div class="text-2xl">6041632426</div>
+            <div class="text-[#252627] text-2xl mb-3 ">Winda Pratiwi</div>
+            <div class="border-t border-[#a4b2c3] w-32 mx-auto pb-2 "></div>
+            <div class="text-2xl text-[#252627] tracking-wider">6041632426</div>
           </div>
         </div>
         <div class="flex justify-center">
