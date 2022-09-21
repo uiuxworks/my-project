@@ -42,7 +42,7 @@ export default function Home(props: PageProps) {
       <Nav />
       <Hero />
       <Top />
-      {props.data?.submitted ? <Rsvp.Complete /> : <Rsvp.Incomplete />}
+      <Rsvp.Incomplete />
       <Gift />
       <Footer />
     </div>
