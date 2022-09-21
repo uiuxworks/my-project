@@ -1,4 +1,5 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
+import { Head } from "$fresh/runtime.ts";
 import Nav from "../components/Nav.tsx";
 import Hero from "../components/Hero.tsx";
 import Top from "../components/Top.tsx";
@@ -28,6 +29,7 @@ export const handler: Handlers = {
       headers: { "Content-Type": "application/json" },
     });
 
+    // Redirect to prevent resubmission.
     return new Response("", {
       status: 303,
       headers: { Location: "/" },
@@ -38,6 +40,9 @@ export const handler: Handlers = {
 export default function Home(props: PageProps) {
   return (
     <div class="max-w-[400px] mx-auto relative font-custom">
+      <Head>
+        <link rel="stylesheet" href="/main.css"></link>
+      </Head>
       <div class="bg-gray-300 w-[1px] h-full absolute inset-y-0 left-0 ml-4">
       </div>
       <div class="bg-gray-300 w-[1px] h-full absolute inset-y-0 right-0 mr-4">
