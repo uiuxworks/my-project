@@ -12,7 +12,7 @@ export default {
   },
   preflight: {
     // Import external stylesheet
-    "@import": `url('http://fonts.cdnfonts.com/css/bentham')`,
+    "@import": `url('https://fonts.cdnfonts.com/css/bentham')`,
     // Declare font face
     "@font-face": [
       {
