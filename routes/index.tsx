@@ -8,10 +8,9 @@ import Footer from "../components/Footer.tsx";
 
 export const handler: Handlers = {
   async POST(req: Request, ctx: HandlerContext) {
-
     const formData = await req.formData();
 
-    if(!formData) return
+    if (!formData) return;
 
     // Convert FormData to JSON.
     const data = Object.fromEntries(
@@ -31,9 +30,9 @@ export const handler: Handlers = {
       headers: { "Content-Type": "application/json" },
     });
 
-    console.log(res.ok );
+    console.log(res.ok);
 
-    return ctx.render( { submitted: res.ok } );
+    return ctx.render({ submitted: res.ok });
   },
 };
 
