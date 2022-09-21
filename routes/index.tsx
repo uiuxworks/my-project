@@ -10,8 +10,6 @@ export const handler: Handlers = {
   async POST(req: Request, ctx: HandlerContext) {
     const formData = await req.formData();
 
-    if (!formData) return;
-
     // Convert FormData to JSON.
     const data = Object.fromEntries(
       [...new Set(formData.keys())].map((key) =>
