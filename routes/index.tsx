@@ -41,6 +41,8 @@ export default function Home(props: PageProps) {
   return (
     <div class="max-w-[400px] mx-auto relative font-custom">
       <Head>
+        <meta property="og:url" content="https://winda-sam-rsvp.deno.dev/"/>
+        <meta property="og:image" content="/social.png"/>
         <link rel="stylesheet" href="/main.css"></link>
       </Head>
       <div class="bg-gray-300 w-[1px] h-full absolute inset-y-0 left-0 ml-4">
